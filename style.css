@@ -1263,6 +1263,11 @@ main {
   line-height: 1rem;
 }
 
+.footer-input:focus{
+    border-color: #4277f0;
+    border-width: 2px;
+    outline: none;
+}
 .footer-input::placeholder {
   color: #9ca3af;
 }
@@ -1976,6 +1981,9 @@ main {
   }
   .footer-contact-list a {
     white-space: nowrap;
+  }
+  .footer-email-link{
+    white-space: pre-wrap;
   }
 }
 @media screen and (min-width: 1400px) {
