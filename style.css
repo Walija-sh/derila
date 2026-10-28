@@ -1583,6 +1583,7 @@ main {
     text-transform: none;
     align-self: flex-start;
     font-size: 1rem;
+    max-width: 350px;
   }
   .feature-cta::after {
     content: none;
