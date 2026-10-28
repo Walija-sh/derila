@@ -528,7 +528,7 @@ main {
 .sticky-banner {
   position: sticky;
   top: 0;
-  z-index: 20;
+  z-index: 80;
   background-color: #f5fbff;
   padding-top: 16px;
   padding-bottom: 24px;
@@ -1967,7 +1967,7 @@ main {
     max-width: 50%;
   }
   .footer-top,
-  .footer-bottom {
+  .footer-bottom-inner {
     padding-inline: 40px;
   }
   .footer-grid-links {
@@ -1996,7 +1996,7 @@ main {
   .reviews-container,
   .faq-container,
   .experience-container,
-  .footer-bottom,
+  .footer-bottom-inner,
   .footer-top {
     padding-inline: 130px;
   }
