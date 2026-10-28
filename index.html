@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Limited Time Promo: 70% Off Derila Ergo! | Derila Ergo</title>
+    <title>Limited Time Promo: 75% Off Derila Ergo! | Derila Ergo</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
   </head>
@@ -297,7 +297,7 @@
         <div class="container hero-container">
           <div class="hero-content">
             <div class="hero-badges">
-              <span class="hero-discount">-70%</span>
+              <span class="hero-discount"> -75%</span>
               <div class="hero-rating">
                 <span class="rating-score">4.5</span>
                 <svg
@@ -346,7 +346,7 @@
             </p>
 
             <a href="order.html" class="btn-primary hero-btn">
-              Get -70% Discount
+              Get  -75% Discount
             </a>
           </div>
         </div>
@@ -450,7 +450,7 @@
               </li>
             </ul>
 
-            <a href="#" class="btn-primary health-cta"> Get -70% Discount </a>
+            <a href="#" class="btn-primary health-cta"> Get  -75% Discount </a>
           </div>
         </div>
       </section>
@@ -493,7 +493,7 @@
           </a>
 
           <div class="banner-cta-wrapper">
-            <a href="#" class="btn-primary banner-cta"> Get -70% Discount </a>
+            <a href="#" class="btn-primary banner-cta"> Get  -75% Discount </a>
           </div>
         </div>
       </div>
@@ -531,7 +531,7 @@
                   data-mobile-text="Sleep better"
                   style="display: none"
                 >
-                  Get -70% Discount
+                  Get  -75% Discount
                 </a>
               </div>
             </div>
@@ -591,7 +591,7 @@
               </p>
             </div>
 
-            <a href="#" class="btn-primary effort-cta"> Get -70% Discount </a>
+            <a href="#" class="btn-primary effort-cta"> Get  -75% Discount </a>
           </div>
         </div>
       </section>
@@ -643,7 +643,7 @@
               aligned for your deepest, truly restful, and pain-free sleep yet.
             </p>
 
-            <a href="#" class="btn-primary sized-cta"> Get -70% Discount </a>
+            <a href="#" class="btn-primary sized-cta"> Get  -75% Discount </a>
           </div>
         </div>
       </section>
@@ -748,6 +748,49 @@
                   />
                 </svg>
                 <span>Verified Customer</span>
+              </div>
+            </div>
+          </div>
+        </template>
+      </section>
+      <section class="faq-section" id="faq">
+        <div class="container faq-container">
+          <h2 class="faq-title">Frequently Asked Questions</h2>
+
+          <div class="faq-list" id="faq-list"></div>
+        </div>
+
+        <template id="faq-template">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <h3 class="faq-question-text"></h3>
+              <span class="faq-icon">
+                <svg
+                  class="icon-plus"
+                  viewBox="0 0 28 28"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect width="28" height="28" rx="14" fill="currentColor" />
+                  <path
+                    d="M12.7 18.62V9.38h2.58v9.24zm-3.46-3.4v-2.44h9.52v2.44z"
+                    fill="#fff"
+                  />
+                </svg>
+                <svg
+                  class="icon-minus"
+                  viewBox="0 0 28 28"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect width="28" height="28" rx="14" fill="currentColor" />
+                  <path d="M9.5 15.5v-3h9v3z" fill="#fff" />
+                </svg>
+              </span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p></p>
               </div>
             </div>
           </div>
@@ -1072,6 +1115,101 @@
                 }
               });
             }
+          }
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const faqsData = [
+          {
+            question: "How long until I feel the difference?",
+            answer:
+              "Most users notice improved sleep quality from the first night. However, the full benefits of proper alignment and enhanced recovery typically become evident within 5-7 nights as your body adapts to optimal sleeping posture.",
+          },
+          {
+            question: "What if I'm not satisfied?",
+            answer:
+              "We back Derila Ergo with a 60-night trial period. If you're not completely satisfied, simply contact our support team for an easy return and full refund. We believe in our product and want you to experience the difference risk-free.",
+          },
+          {
+            question: "What makes Derila Ergo different?",
+            answer:
+              "Unlike standard pillows that only focus on comfort, Derila Ergo combines advanced ergonomic design, cooling technology, and strategic support zones in one comprehensive system. Each feature is engineered to enhance sleep quality and performance recovery.",
+          },
+          {
+            question: "How many should I order?",
+            answer:
+              "We recommend ordering two Derila Ergo pillows. Many users keep one for home and one for travel to maintain consistent sleep quality. Plus, ordering multiple pillows now saves on shipping and ensures you have a backup during washing.",
+          },
+        ];
+
+        const list = document.getElementById("faq-list");
+        const template = document.getElementById("faq-template");
+
+        faqsData.forEach((faq) => {
+          const clone = template.content.cloneNode(true);
+
+          clone.querySelector(".faq-question-text").textContent = faq.question;
+          clone.querySelector(".faq-answer-inner p").textContent = faq.answer;
+
+          list.appendChild(clone);
+        });
+
+        const faqItems = document.querySelectorAll(".faq-item");
+
+        function openItem(item) {
+          const button = item.querySelector(".faq-question");
+          const answer = item.querySelector(".faq-answer");
+
+          item.classList.add("is-active");
+          button.setAttribute("aria-expanded", "true");
+          answer.style.maxHeight = answer.scrollHeight + "px";
+        }
+
+        function closeItem(item) {
+          const button = item.querySelector(".faq-question");
+          const answer = item.querySelector(".faq-answer");
+
+          item.classList.remove("is-active");
+          button.setAttribute("aria-expanded", "false");
+          answer.style.maxHeight = null;
+        }
+
+        faqItems.forEach((item) => {
+          const button = item.querySelector(".faq-question");
+
+          button.addEventListener("click", () => {
+            const isActive = item.classList.contains("is-active");
+
+            faqItems.forEach((otherItem) => {
+              if (otherItem !== item) {
+                closeItem(otherItem);
+              }
+            });
+
+            if (isActive) {
+              closeItem(item);
+            } else {
+              openItem(item);
+            }
+          });
+        });
+
+        const firstItem = faqItems[0];
+        if (firstItem) {
+          setTimeout(() => {
+            openItem(firstItem);
+          }, 50);
+        }
+
+        window.addEventListener("resize", () => {
+          const activeItem = document.querySelector(".faq-item.is-active");
+          if (activeItem) {
+            const answer = activeItem.querySelector(".faq-answer");
+            answer.style.maxHeight = "none";
+            const height = answer.scrollHeight;
+            answer.style.maxHeight = height + "px";
           }
         });
       });
