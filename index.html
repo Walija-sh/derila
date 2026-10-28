@@ -351,10 +351,7 @@
           </div>
         </div>
       </section>
-      <section
-        class="health-hazards"
-        data-ga-section="4 - Are You Unknowingly Harming Your Health Every Night?"
-      >
+      <section class="health-hazards">
         <div class="container health-container">
           <h2 class="health-title sm">
             Are You Unknowingly Harming Your Health Every Night?
@@ -457,51 +454,90 @@
           </div>
         </div>
       </section>
-      <section class="designed-for" data-ga-section="5 - Derila Ergo: Designed for Your Optimal Sleep &amp; Well-being">
-  <div class="container designed-container">
-    <div class="designed-content">
-      
-      <h2 class="designed-title">
-        Derila Ergo: Designed for Your Optimal Sleep &amp; Well-being
-      </h2>
+      <section class="designed-for">
+        <div class="container designed-container">
+          <div class="designed-content">
+            <h2 class="designed-title">
+              Derila Ergo: Designed for Your Optimal Sleep &amp; Well-being
+            </h2>
 
-      <p class="designed-description">
-        It's time to reclaim your nights and revitalize your health. Derila Ergo is not just a pillow; it's an advanced ergonomic solution crafted to support your body's natural alignment, improve breathing, and reduce the risks associated with poor sleep. Our unique design provides the essential head and neck support needed for truly restorative sleep.
-      </p>
+            <p class="designed-description">
+              It's time to reclaim your nights and revitalize your health.
+              Derila Ergo is not just a pillow; it's an advanced ergonomic
+              solution crafted to support your body's natural alignment, improve
+              breathing, and reduce the risks associated with poor sleep. Our
+              unique design provides the essential head and neck support needed
+              for truly restorative sleep.
+            </p>
 
-      <div class="designed-image">
-        <img 
-          src="./assets/design-for-sm.avif" 
-          alt="Derila Ergo pillow demonstration"
-          loading="lazy"
-          class="design-img-sm"
-        >
-      
+            <div class="designed-image">
+              <img
+                src="./assets/design-for-sm.avif"
+                alt="Derila Ergo pillow demonstration"
+                loading="lazy"
+                class="design-img-sm"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <div id="sticky-middle-banner" class="sticky-banner">
+        <div class="container sticky-container">
+          <!-- Logo link -->
+          <a href="./index.html" class="banner-logo-link">
+            <img
+              src="./assets/derila-ergo-logo.svg"
+              alt="Derila Ergo"
+              class="banner-logo"
+            />
+          </a>
+
+          <div class="banner-cta-wrapper">
+            <a href="#" class="btn-primary banner-cta"> Get -70% Discount </a>
+          </div>
+        </div>
       </div>
+      <section class="features" id="features-section">
+        <div class="container features-container">
+          <h2 class="features-title">
+            Why Derila Ergo Stands Apart: <br />7 Reasons to Switch Today
+          </h2>
 
-    </div>
-  </div>
-</section>
-<div id="sticky-middle-banner" class="sticky-banner" data-ga-section="6 - Sticky Banner">
-  <div class="container sticky-container">
-    
-    <!-- Logo link -->
-    <a href="./index.html" class="banner-logo-link">
-      <img 
-        src="./assets/derila-ergo-logo.svg" 
-        alt="Derila Ergo" 
-        class="banner-logo"
-      >
-    </a>
+          <div class="features-grid" id="features-grid"></div>
 
-    <div class="banner-cta-wrapper">
-      <a href="#" class="btn-primary banner-cta">
-        Get -70% Discount
-      </a>
-    </div>
+          <template id="feature-template">
+            <div class="feature-row">
+              <h3 class="feature-title sm"></h3>
+              <div class="feature-media">
+                <video
+                  class="feature-video lazyload"
+                  autoplay
+                  loop
+                  playsinline
+                  muted
+                  preload="none"
+                >
+                  <source src="" type="video/mp4" />
+                </video>
+              </div>
 
-  </div>
-</div>
+              <div class="feature-content">
+                <h3 class="feature-title lg"></h3>
+                <p class="feature-description"></p>
+
+                <a
+                  href="#"
+                  class="btn-primary feature-cta"
+                  data-mobile-text="Sleep better"
+                  style="display: none"
+                >
+                  Get -70% Discount
+                </a>
+              </div>
+            </div>
+          </template>
+        </div>
+      </section>
     </main>
 
     <script>
@@ -557,6 +593,96 @@
           }
         });
       })();
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const featuresData = [
+          {
+            title: "1. Tucked Neck Correction",
+            description:
+              "Unlike traditional pillows that force your chin to your collarbone, straining your spine and closing your breathing tract, Derila Ergo's curved shape automatically corrects your posture. It keeps your chin comfortably raised, allowing your spine to unwind and your airway to remain open.",
+            videoUrl: "./assets/1.mp4",
+            showCta: false,
+          },
+          {
+            title: "2. Support in Any Position",
+            description:
+              "Other ergonomic pillows might help when you're on your back, but become ineffective when you turn to your side or stomach. Derila Ergo is uniquely shaped for all sleeping positions – back, side, and stomach – providing consistent comfort and support throughout the night.",
+            videoUrl: "./assets/2.mp4",
+            showCta: false,
+          },
+          {
+            title: "3. Shoulder Support",
+            description:
+              "Poor shoulder or upper body posture can tighten your neck and upper chest muscles, restricting airflow. Derila Ergo acknowledges shoulder comfort by allowing them to unwind and stretch out, easing tension and improving airway space.",
+            videoUrl: "./assets/3.mp4",
+            showCta: true,
+          },
+          {
+            title: "4. Jaw Relief",
+            description:
+              "Regular pillows can risk misaligning your lower jaw, leading to discomfort, underbite, and clicking. More importantly, this tension can affect your breathing. Derila Ergo's ergonomic design helps keep tension off your jaw, crucial for optimal breathing and comfort.",
+            videoUrl: "./assets/4.mp4",
+            showCta: false,
+          },
+          {
+            title: "5. Improved Air Flow",
+            description:
+              "Overheating and moisture can cause nasal congestion and swelling of airway tissues, making breathing difficult. Derila Ergo's breathable texture helps maintain a comfortable temperature throughout the night, reducing swelling and inhibiting bacteria growth for easier breathing.",
+            videoUrl: "./assets/5.mp4",
+            showCta: false,
+          },
+          {
+            title: "6. Advanced Memory Foam",
+            description:
+              "Average pillows quickly lose their shape and elasticity, diminishing the support they offer over time. Derila Ergo features advanced, breathable memory foam that retains its shape and all its benefits night after night, ensuring lasting comfort and support.",
+            videoUrl: "./assets/6.mp4",
+            showCta: true,
+          },
+          {
+            title: "7. Improved Circulation",
+            description:
+              "Oxygen must pass through your entire body for maximum benefits. Uncomfortable pillows can cut off circulation, leading to nerve damage and reduced sleep quality. Derila Ergo ensures your arms always have a comfortable resting place, without your neck and shoulders cutting off their vital circulation.",
+            videoUrl: "./assets/7.mp4",
+            showCta: false,
+          },
+        ];
+
+        const grid = document.getElementById("features-grid");
+        const template = document.getElementById("feature-template");
+
+        featuresData.forEach((feature, index) => {
+          const clone = template.content.cloneNode(true);
+
+          const row = clone.querySelector(".feature-row");
+
+          if (index % 2 !== 0) {
+            row.classList.add("is-reversed");
+          }
+
+          const titleSm = clone.querySelector(".feature-title.sm");
+          const titleLg = clone.querySelector(".feature-title.lg");
+
+          if (titleSm) titleSm.textContent = feature.title;
+          if (titleLg) titleLg.textContent = feature.title;
+
+          clone.querySelector(".feature-description").textContent =
+            feature.description;
+
+          const video = clone.querySelector(".feature-video");
+          const source = clone.querySelector(".feature-video source");
+          source.src = feature.videoUrl;
+          video.load();
+
+          const cta = clone.querySelector(".feature-cta");
+          if (feature.showCta) {
+            cta.style.display = "inline-block";
+          }
+
+          grid.appendChild(clone);
+        });
+      });
     </script>
   </body>
 </html>

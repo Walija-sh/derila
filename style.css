@@ -567,6 +567,76 @@ main {
   text-transform: none;
 }
 
+.features {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.features-container {
+  padding-inline: 16px;
+}
+.features-title {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.features-grid {
+  display: grid;
+  gap: 40px;
+}
+
+.feature-row {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+  column-gap: 64px;
+}
+
+.feature-media {
+  width: 100%;
+}
+
+.feature-video {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+  background: #000;
+}
+
+.feature-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-title {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+}
+.feature-title.lg {
+  display: none;
+}
+
+.feature-description {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.feature-cta {
+  align-self: flex-start;
+  margin-top: 40px;
+  text-transform: uppercase;
+  font-size: 0;
+}
+.feature-cta::after {
+  content: attr(data-mobile-text);
+  font-size: 1rem;
+}
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
@@ -732,6 +802,63 @@ main {
   .banner-logo-link {
     padding-inline: 0;
   }
+  .features {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .features-container {
+    padding-inline: 24px;
+  }
+
+  .features-title {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    margin-bottom: 64px;
+  }
+
+  .features-grid {
+    gap: 64px;
+  }
+
+  .feature-row {
+    flex-direction: row;
+    align-items: center;
+    gap: 64px;
+  }
+
+  .feature-row.is-reversed {
+    flex-direction: row-reverse;
+  }
+
+  .feature-media,
+  .feature-content {
+    flex: 1;
+  }
+
+  .feature-video {
+    height: 350px;
+  }
+
+  .feature-title {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    margin-bottom: 24px;
+  }
+  .feature-title.lg {
+    display: block;
+  }
+  .feature-title.sm {
+    display: none;
+  }
+
+  .feature-cta {
+    text-transform: none;
+    align-self: flex-start;
+    font-size: 1rem;
+  }
+  .feature-cta::after {
+    content: none;
+  }
 }
 @media screen and (min-width: 1023px) {
   .container {
@@ -794,7 +921,8 @@ main {
     background-position: 20% center;
     padding-inline: 40px;
   }
-  .sticky-container {
+  .sticky-container,
+  .features-container {
     padding-inline: 40px;
   }
 }
@@ -809,7 +937,8 @@ main {
   .hero-container,
   .health-container,
   .designed-for,
-  .sticky-container {
+  .sticky-container,
+  .features-container {
     padding-inline: 130px;
   }
   .nav-desktop-links {
