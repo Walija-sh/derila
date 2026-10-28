@@ -647,6 +647,112 @@
           </div>
         </div>
       </section>
+      <section class="reviews" id="reviews">
+        <div class="container reviews-container">
+          <div class="reviews-header">
+            <div class="reviews-stars-top">
+              <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+              <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+              <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+              <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+              <svg
+                class="star-icon star-icon-empty"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+            </div>
+            <h2 class="reviews-title">Customer Reviews</h2>
+          </div>
+
+          <div class="reviews-grid" id="reviews-grid"></div>
+
+          <div class="reviews-actions">
+            <button class="btn-read-more" id="read-more-btn">Read more</button>
+          </div>
+        </div>
+
+        <template id="review-template">
+          <div class="review-card">
+            <div class="review-stars">
+              <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+              <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+              <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+              <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+              <svg
+                class="star-icon star-icon-empty"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+            </div>
+            <div class="review-meta">
+              <img
+                src=""
+                alt="Country flag"
+                class="review-flag"
+                width="32"
+                height="17"
+              />
+              <span class="review-date"></span>
+            </div>
+            <p class="review-text"></p>
+            <div class="review-author">
+              <p class="author-name"></p>
+              <div class="author-verified">
+                <svg
+                  class="verified-icon"
+                  viewBox="0 0 22 22"
+                  fill="currentColor"
+                >
+                  <path
+                    d="m22 11-2.44-2.77996.34-3.68-3.61-.82-1.89-3.180001-3.4 1.460001-3.4-1.460001-1.89 3.180001-3.61.81.34 3.68-2.44 2.78996 2.44 2.78-.34 3.69 3.61.82 1.89 3.18 3.4-1.47 3.4 1.46 1.89-3.18 3.61-.82-.34-3.68zm-13 5-4-4 1.41-1.41 2.59 2.58 6.59-6.58996 1.41 1.42z"
+                  />
+                </svg>
+                <span>Verified Customer</span>
+              </div>
+            </div>
+          </div>
+        </template>
+      </section>
     </main>
 
     <script>
@@ -790,6 +896,183 @@
           }
 
           grid.appendChild(clone);
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const reviewsData = [
+          {
+            stars: 4,
+            country: "ie",
+            date: "06/30/2025",
+            text: "Quality of product is excellent. Cool and comfortable materials. Great neck support",
+            name: "Edel",
+          },
+          {
+            stars: 5,
+            country: "au",
+            date: "07/16/2025",
+            text: "Incredibly comfortable!",
+            name: "Venera",
+          },
+          {
+            stars: 5,
+            country: "us",
+            date: "06/14/2025",
+            text: "Designed a very comfortable/ health enhancing pillow were",
+            name: "Pearl",
+          },
+          {
+            stars: 5,
+            country: "ca",
+            date: "07/25/2025",
+            text: "The pillows have proved very comfortable for me, a back sleeper and my wife, a side sleeper.",
+            name: "John",
+          },
+          {
+            stars: 5,
+            country: "au",
+            date: "05/20/2025",
+            text: "Very comfortable pillow",
+            name: "Krysia",
+          },
+          {
+            stars: 5,
+            country: "de",
+            date: "05/13/2025",
+            text: "We are thrilled with the pillows. It was a great decision.",
+            name: "Rainer",
+          },
+          {
+            stars: 5,
+            country: "us",
+            date: "06/23/2025",
+            text: "The design is perfect for me as I need to sleep in my back but sm normally a side sleeper. This pillow is perfect for my needs",
+            name: "David",
+          },
+          {
+            stars: 5,
+            country: "au",
+            date: "07/18/2025",
+            text: "Your pillow and the cooling pillow slip are very well-designed and the materials and manufacture are of high quality.",
+            name: "Marianne",
+          },
+          {
+            stars: 5,
+            country: "us",
+            date: "06/02/2025",
+            text: "The most comfortable pillow I've ever had",
+            name: "Mike",
+          },
+          {
+            stars: 5,
+            country: "us",
+            date: "07/19/2025",
+            text: "The design and structure of the pillow fit my head like a glove",
+            name: "Elizabeth",
+          },
+          {
+            stars: 5,
+            country: "ch",
+            date: "07/29/2025",
+            text: "Material erconomic is amazing, especyally, without Latex!!!!!",
+            name: "Enzo",
+          },
+          {
+            stars: 4,
+            country: "au",
+            date: "05/21/2025",
+            text: "The pillow is amazingly comfortable I love it love going to bed now",
+            name: "Christine",
+          },
+          {
+            stars: 4,
+            country: "us",
+            date: "06/26/2025",
+            text: "The memory foam is excellent, just the right firmness and pressure relief! I also love the ergonomic design of the pillow! I'm supported on my back or sides!",
+            name: "Connie",
+          },
+          {
+            stars: 4,
+            country: "au",
+            date: "06/18/2025",
+            text: "The shape of the pillow is amazing and very well thought of.",
+            name: "Cornelia",
+          },
+        ];
+
+        const grid = document.getElementById("reviews-grid");
+        const template = document.getElementById("review-template");
+        const readMoreBtn = document.getElementById("read-more-btn");
+
+        const getInitialLimit = () => (window.innerWidth >= 768 ? 9 : 4);
+        let initialLimit = getInitialLimit();
+
+        reviewsData.forEach((review, index) => {
+          const clone = template.content.cloneNode(true);
+
+          const starsContainer = clone.querySelector(".review-stars");
+          starsContainer.innerHTML = "";
+          for (let i = 0; i < 5; i++) {
+            const starSvg = document.createElementNS(
+              "http://www.w3.org/2000/svg",
+              "svg",
+            );
+            starSvg.setAttribute("viewBox", "0 0 24 24");
+            starSvg.setAttribute("fill", "currentColor");
+            starSvg.classList.add("star-icon");
+            if (i >= review.stars) {
+              starSvg.classList.add("star-icon-empty");
+            }
+            const path = document.createElementNS(
+              "http://www.w3.org/2000/svg",
+              "path",
+            );
+            path.setAttribute(
+              "d",
+              "M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z",
+            );
+            starSvg.appendChild(path);
+            starsContainer.appendChild(starSvg);
+          }
+
+          const flagImg = clone.querySelector(".review-flag");
+          flagImg.src = `./assets/${review.country}.svg`;
+          flagImg.alt = `${review.country.toUpperCase()} flag`;
+
+          clone.querySelector(".review-date").textContent = review.date;
+          clone.querySelector(".review-text").textContent = review.text;
+          clone.querySelector(".author-name").textContent = review.name;
+
+          const card = clone.querySelector(".review-card");
+          if (index >= initialLimit) {
+            card.classList.add("is-hidden");
+          }
+
+          grid.appendChild(clone);
+        });
+
+        readMoreBtn.addEventListener("click", () => {
+          grid.classList.add("show-all");
+          readMoreBtn.classList.add("is-hidden");
+        });
+
+        window.addEventListener("resize", () => {
+          const newLimit = getInitialLimit();
+          if (newLimit !== initialLimit) {
+            initialLimit = newLimit;
+            if (!grid.classList.contains("show-all")) {
+              const cards = grid.querySelectorAll(".review-card");
+              cards.forEach((card, index) => {
+                if (index >= initialLimit) {
+                  card.classList.add("is-hidden");
+                } else {
+                  card.classList.remove("is-hidden");
+                }
+              });
+            }
+          }
         });
       });
     </script>
